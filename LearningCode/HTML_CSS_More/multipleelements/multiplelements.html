@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Multiple Elements Selector</title>
+        <script type=text/javascript>
+        function doIt() {
+            var result = document.querySelectorAll("div.article");
+            for (var i=0; i < result.length; i++) {
+                document.getElementById("output").innerHTML += result[i].innerHTML + "<br>";
+            }
+            result[1].innerHTML = "Changed to article #3";
+        }
+        </script>
+        <style>
+            .note {
+                width: 150px;
+                height: 40px;
+                background-color: #ffd800;
+            }
+            .article {
+                width: 150px;
+                height: 40px;
+                background-color: #b6ff00;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="article">This is article #1</div><br>
+        <div class="note">This is note #1</div><br>
+        <br>
+        <div class="article">This is article #2</div><br>
+        <div class="note">This is note #2</div><br>
+        <br>
+        <button id="doit" onclick="doIt()">Do It</button><br>
+        <br>
+        <span id="output"</span>
+    </body>
+</html>

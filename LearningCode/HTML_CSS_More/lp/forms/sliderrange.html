@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+    <script>
+        window.onload = function()
+        {
+            document.getElementById("slider").addEventListener('change',
+            function()
+            {
+                document.getElementById('slideOut').innerHTML=document.getElementById('slider').value;
+            }
+            ,false);
+        }
+
+        function evalSlider()
+        {
+            var sliderValue = document.getElementById('rating').value;
+            document.getElementById('sliderVal').innerHTML = sliderValue;
+        }
+    </script>
+</head>
+
+<body>
+    <form action="#" method="post">
+        <input id="slider" type="range" min="0" max="100" />
+        <output id="slideOut"></output>
+    </form>
+
+    <form action="#" method="post">
+        Rate your Javascript Skills (0-100):
+        <input type="range" id="rating" min="0" max="100" oncchange="evalSlider()" />
+        <output id="sliderVal"></output>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reading content of HTML</title>
+        <script>
+            function doIt() {
+                var classes =document.getElementsByClassName("class1");
+                alert(" Number of " + classes[0].className + " is " + classes.length);
+            }
+        </script>
+        <style>
+            .class1 {
+                width: 100px;
+                height:100px;
+                color: #ffd800;
+                background-color: #ff6a00;
+            }
+            .class2 {
+                width: 100px;
+                height:100px;
+                color: #b6ff00;
+                background-color: #000000;
+            }
+            .class3 {
+                width: 100px;
+                height:100px;
+                color: #ffd800;
+                background-color: #ff00ff ;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div1" class="class1">class 1</div><br>
+        <div id="div2" class="class1">class 1</div><br>
+        <div id="div3" class="class2">class 3</div><br>
+        <input type="button" value="click" onclick="doIt()" />
+    </body>
+</html>

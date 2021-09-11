@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dutch</title>
+        <script>
+            var playing;
+            var player;
+
+            window.onload = function()
+            {
+                playing= 0;
+                document.getElementById('next').addEventListener('click', nextSong, false);
+                player = document.getElementById('dutch');
+            }
+            function nextSound()
+            {
+                if(playing == 0)
+                {
+                    player.pause();
+                    player.src = "http://localhost/MEDIA/Dynamicsoursing/Dutchavelli.mp3";
+                    player.play();
+                    playing = 1;
+                } else{
+                    player.pause();
+                    player.src = "another song";
+                    player.play();
+                    playing =0;
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+        <audio controls="controls" preload="preload" id="dutch">
+            <source src="http://localhost/MEDIA/Dynamicsoursing/Dutchavelli.mp3" />
+        </audio><br/>
+        <button id="next">Next</button>
+    </body>
+</html>

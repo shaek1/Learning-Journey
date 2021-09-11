@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Using HTML5</title>
+        <script>
+            function loadFruitArticle(ID)
+            {
+                var imghttp=new XMLHttpRequest();
+                imghttp.onreadystatechange=function()
+                {
+                    if (imghttp.readyState==4 && imghttp.status==200)
+                {
+                    document.getElementById("Fruit").innerHTML=imghttp.responseText;
+                }
+            }
+            if (ID=='apples') {
+                imghttp.open("GET","http://localhost/xmlhttprequesttoswapHTML5/apples.html", true);
+            } else if (ID=='oranges') {
+                imghttp.open("GET","http://localhost/xmlhttprequesttoswapHTML5/oranges.html", true);
+            } else {
+                imghttp.open("GET","http://localhost/xmlhttprequesttoswapHTML5/bananas.html", true);
+            }
+            imghttp.send();
+        }
+        </script>
+    </head>
+    <body>
+        <div id="Fruit"></div>
+        <button id="apples" onclick="loadFruitArticle(this.id)">Apples</button>
+        <button id="oranges" onclick="loadFruitArticle(this.id)">Oranges</button>
+        <button id="bananas" onclick="loadFruitArticle(this.id)">Bananas</button>
+    </body>
+</html>

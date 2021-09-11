@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- WATCH THIS https://learningpeople.percipio.com/courses/cd3ac615-d9c3-11e6-a5b1-0242c0a80503/videos/cd3aed22-d9c3-11e6-a5b1-0242c0a80503
+-->
+<html>
+    <head>
+        <title>Modifying CSS with JS</title>
+        <script>
+            function doIt() {
+                document.getElementById("redBox").style.color = "#0000ff";
+            }
+        </script>
+        <style>
+            #redBox {
+                font-family: Calibri;
+                font-size: 14pt;
+                font-weight: bold;
+                color: #ffd800;
+                width: 200px;
+                height: 200px;
+                background-color: #f00;
+                text-align: center;
+                line-height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <p></p>
+        <div id="redBox" class="clickBox">ID ="redBox"</div>
+        <br><br>
+        <input type="button" onclick="doIt()" value="GO" />
+    </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Detecting screen resolution</title>
+        <script>
+            function doIt() {
+                var W = window.screen.availWidth;
+                var H = window.screen.availHeight;
+                document.getElementById("output").innerHTML = "width: " + W + " Height: " + H;
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="doIt()">Detect</button>
+        <span id="output"></span>
+    </body>
+</html>

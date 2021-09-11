@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dialog Tag</title>
+        <script>
+            function showIt() {
+                document.getElementById("notify").style.display ="block";
+            }
+            function hideIt() {
+                document.getElementById("notify").style.display ="none";
+            }
+        </script>
+        <style>
+            #notify {
+                display: none;
+                font-family: Calibri;
+                font-weight: bold;
+                background-color: #ffd800;
+                text-align: center;
+                border: 5px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <dialog id="notify">You clicked the button!<br><br>
+            <button id="exit" onclick="hideIt()">Exit</button>
+        </dialog>
+        <br><br>
+        <button onclick="showIt()">Show</button>
+    </body>
+</html>

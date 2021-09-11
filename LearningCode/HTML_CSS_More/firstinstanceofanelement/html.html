@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>HTML5</title>
+        <script type=text/javascript>
+            function doIt() {
+                var result = document.querySelector("div.not, div.article");
+                document.getElementById("output").innerHTML = result.innerHTML;
+            }
+
+        </script>
+        <style>
+            .note {
+                width: 150px;
+                height: 40px;
+                background-color: #ffd800;
+            }
+            .article {
+                width: 150px;
+                height: 40px;
+                background-color: #b6ff00;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="article">This is an Article</div><br>
+        <div class="note">This is a note</div><br>
+        <br>
+        <button id="doit" onclick="doIt()">Do It</button><br>
+        <br>
+        <span id="output"></span>
+    </body>
+</html>

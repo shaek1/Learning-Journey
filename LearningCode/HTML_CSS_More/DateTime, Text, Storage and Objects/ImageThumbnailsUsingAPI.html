@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!-- WATCH THIS https://learningpeople.percipio.com/courses/cd3bd786-d9c3-11e6-a5b1-0242c0a80503/videos/cd3bfe98-d9c3-11e6-a5b1-0242c0a80503
+-->
+<html>
+    <head>
+        <title>File Thumbnails using API</title>
+        <style>
+            body {
+                font-family: Calibri;
+            }
+            .thumb {
+                height: 100px;
+                border: 2px solid black;
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body> 
+    <input type="file" id="files" multiple /><br><br>
+    <span id="list"></span>
+
+    <script>
+        document.getElementById('files').addEventListener('change', fileSelect, false);
+        function fileSelect(evt) {
+            var upped = evt.target.files; // FileList object
+            var output ="";
+
+            for (var i=0; i <= upped.length; i++) {
+                files = upped[i];
+                //Only process image files.
+                if (files.type.substring(0,5) !="image") {
+                    alert("Not an image file!");
+                    return;
+                } else {
+                    var reader = new FileReader();
+                    //Capture file information
+                    reader.onload =(function(makeThumb) {
+                        return function(e) {
+                            //Create thumbnail using a span
+                            var span = document.createElement("span");
+                            span.innerHTML
+            ['<img class="thumb" src="',e.target.result,'" title="', escape(makeThumb.name),'"/>'].join
+            (""); 
+                            document.getElementById("list").insertBefore(span,null);
+                        };
+                    })(files);
+                    //Prcoess files as a data url
+                    reader.readAsDataURL(files);
+                }
+            }
+        }
+    </script>
+    
+    </body>
+</html>

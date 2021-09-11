@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reading content of HTML</title>
+        <script>
+            function doIt() {
+                x = document.getElementById("output");
+                alert(x.innerHTML);
+            }
+        </script>
+    </head>
+    <body>
+        <button id="button1" onclick="doIt()">Click me</button>
+        <span id="output">This is some text</span>
+    </body>
+</html>

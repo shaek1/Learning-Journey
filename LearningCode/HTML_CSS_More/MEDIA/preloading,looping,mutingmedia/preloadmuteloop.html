@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Playing Audio</title>
+        <script>
+            window.onload = function()
+            {
+                var myAudio = document.getElementById('dutch');
+                myAudio.muted = true;
+            }
+        </script>
+    </head>
+    <body>
+        <audio controls="controls" preload="preload" loop="loop" id="dutch">
+            <source src="http://localhost/audio/Dutchavelli.mp3" type="audio/mp3"/>
+            <source src="http://localhost/audio/Dutchavelli.ogg" type="audio/ogg"/>
+        </audio>
+    </body>
+</html>

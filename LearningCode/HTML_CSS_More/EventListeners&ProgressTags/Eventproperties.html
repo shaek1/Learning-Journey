@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event Properties</title>
+        <script>
+            function clickDiv(box) {
+                alert(box.id);
+            }
+            function dblClick() {
+                alert("You double");
+            }
+            function submit(file) {
+                alert(file);
+            }
+        </script>
+        <style>
+            #div1 {
+                width: 200px;
+                height: 200px;
+                background-color: #ffd800;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div1" onclick="clickDiv(this)"></div>
+        <br><br>
+        <button ondblclick="dblClick()">Double CLick</button>
+        <input type="file" onchange="submit(this)" />
+    </body>
+</html>

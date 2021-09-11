@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Confirming input</title>
+        <script>
+            function confirmMe() {
+                var result;
+                var check = confirm("Would you like to proceed?");
+                if (check == true) {
+                    result = "Proceeding";
+                } else{
+                    result = "Cancelling";
+                }
+                document.getElementById("output").innerHTML = result;
+            }
+        </script>
+    </head>
+    <body>
+        <p>Press to Continue</p>
+        <input type="button" onclick="confirmMe()" value="Submit" />
+        <p id="output"></p>
+    </body>
+</html>

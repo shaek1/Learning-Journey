@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- WATCH THIS https://learningpeople.percipio.com/courses/cd3ac615-d9c3-11e6-a5b1-0242c0a80503/videos/cd3aed24-d9c3-11e6-a5b1-0242c0a80503
+-->
+<html>
+    <head>
+        <title>Access and change HTML tags</title>
+        <script>
+            function doIt () {
+                var tag = document.getElementsByTagName("div");
+                for(var i = 0; i < tag.length; i++) {
+                    tag[i].style.backgroundColor= "red";
+                    tag[i].style.font ="20px Calibri";
+                    tag[i].innerHTML = "CHANGED";
+                }
+            }
+        </script>
+
+        <style>
+            .class1 {
+                font-family: 'Times New Roman';
+                font-size: 12px;
+                font-color: 'black';
+                width: 200px;
+                height: 75px;
+                background-color: #ff6a00;
+            }
+            .class2 {
+                font-family: 'Calibri';
+                font-size: 18px;
+                font-color: 'blue';
+                width: 200px;
+                height: 75px;
+                background-color: #0094ff;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="class1">DIV1</div><br>
+        <div class="class2">DIV2</div><br>
+        <div class="class1">DIV3</div><br>
+        <div class="class2">DIV4</div><br>
+        <div class="class1">DIV5</div><br>
+        <input type="button" onclick="doIt()" value="GO" /><br><br>
+        <span id="output"></span>
+    </body>
+</html>

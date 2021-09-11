@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BBestPractice</title>
+        <style>
+            .rotateBox {
+                width:150px;
+                height: 50px;
+                background-color: #ff6a00;
+                font-family: Calibri;
+                text-align: center;
+                line-height: 50px;
+                transform: rotate(15deg); /* For IE11, Firefox */
+                -ms-transform: rotate(15deg); /* For IE9 or higher */
+                -webkit-transform: rotate(15deg); /* For Chrome, Safari, Opera */
+            }
+        </style>
+        <body>
+            <span id="output"></span>
+            <br /><br />
+            <div class="rotateBox">Rotated with CSS</div>
+            <video width="500" height="250" controls>
+                <source src="movie.mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+                <source src="movie.avi" type="video/webm">
+                //For browsers which dont support these files//
+                Your browser doesn't support HTML5 video
+            </video>
+        </body>
+    </head>
+</html>

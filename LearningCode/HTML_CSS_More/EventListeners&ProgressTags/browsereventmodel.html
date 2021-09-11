@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event Model</title>
+        <script>
+            window.onload = function()
+            {
+                var myDiv = document.getElementById('myDiv');
+                myDiv.addEventListener("mouseover", react , false)
+            }
+            function react()
+            {
+                alert("stay out of my div!");
+            }
+        </script>
+    </head>
+    <body>
+        <div id="myDiv">
+            <p>The quick brown fox jumped over the lazy dogs</p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>AjaxwithXML</title>
+        <script>
+            function loadFruitArticle(ID)
+            {
+                var imghttp=new XMLHttpRequest();
+                imghttp.onreadystatechange=function()
+                {
+                    if (imghttp.readyState==4 && imghttp.status==200)
+                {
+                    document.getElementById("Fruit").innerHTML=imghttp.responseText;
+                }
+            }
+            if (ID=='apples') {
+                imghttp.open("GET","apples.html",true);
+            } else if (ID=='oranges') {
+                imghttp.open("GET","oranges.html",true);
+            } else {
+                imghttp.open("GET","bananas.html",true);
+            }
+            imghttp.send();
+        }
+        </script>
+    </head>
+</html>

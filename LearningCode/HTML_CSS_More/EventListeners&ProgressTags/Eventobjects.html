@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event Object</title>
+        <script>
+            window.onload = function()
+            {
+                document.getElementById('myDiv'). addEventListener('click', processClick, false);
+            }
+            function processClick(event)
+            {
+                //console.log(event);
+                var output = "";
+                output += event.timeStamp;
+                
+                document.getElementById('eventInfo').innerHTML = output;
+                "TimeStamp: " + output;
+            }
+        </script>
+        <style>
+            #myDiv {
+                width: 200px;
+                background-color: rgb(230,230,230);
+                border: 3px solid black;
+                height: 200px;
+                padding: 3px;
+            }
+        </style>
+    </head>
+    <body>
+      <div id="myDiv">
+          <p>The quick brown fox jumped oer the lazy dogs.</p>
+      </div> 
+      <div id="eventInfo"></div>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Listeners</title>
+        <script>
+            window.onload=function()
+            {
+                var theButton = document.getElementById('press');
+                theButton.addEventListener('click',greetUser, false);
+            }
+            function greetUser(event)
+            {
+                var callerId=event.target.id;
+                //alert("Hello User");
+                alert("blah blah " + callerId);
+            }
+        </script>
+    </head>
+    <body>
+        <button id="press">Press Me</button>
+    </body>
+</html>

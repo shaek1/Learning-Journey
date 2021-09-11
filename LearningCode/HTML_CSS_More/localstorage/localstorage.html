@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Local Storage</title>
+    <style>
+        #output
+        {
+            border: 1px solid black;
+        }
+    </style>
+    <script>
+        var first, last, oFirst, oLast;
+        window.onload=function()
+        {
+            first = document.getElementById('first');
+            last = document.getElementById('last');
+            oFirst = document.getElementById('fnameOutput');
+            oLast = document.getElementById('lnameOutput');
+            document.getElementById('storeData').addEventListener('click', storeData, false);
+            document.getElementById('retrieveData').addEventListener('click', retrieveData, false);
+        }
+        function storeData()
+        {
+            localStorage.firstName = first.value;
+            localStorage.lastName = last.value;
+        }
+        function retrieveData()
+        {
+            oFirst.innerHTML = localStorage.firstName;
+            oLast.innerHTML = localStorage.lastName;
+        }
+    </script>
+    </head>
+    <script>
+
+    </script>
+    <body>
+        <label>First Name:</label><input type="text" id="first"/><br/>
+        <label>Last Name</label><input type="text" id="last"/><br/>
+        <button id="storeData">Store Button</button>
+        <div id="output">
+            First Name: <output id="fnameOutput"></output><br/>
+            Last Name: <output id="lnameOutput"></output><br/>
+        </div>
+    <button id="retrieveData">Retrieve Data</button>
+    </body>
+    </html>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <title>Color Panel</title>
+        <script>
+            function getColor()
+            {
+                alert(document.getElementById('userColor').value);
+            }
+            function getColor()
+            {
+                alert(document.getElementById('color').value);
+            }
+            window.onload = function()
+            {
+                document.getElementById("color").addEventListener('change', displayColor, false);
+            }
+            function displayColor()
+            {
+                document.getElementById('colorOut').innerHTML=document. getElementById('color').value;
+            }
+        </script>
+    </head>
+
+    <body>
+        <form action="#" method="post">
+            <input type="color" id="userColor" onchange="getColor()" />
+        </form>
+
+        <form action="#" method="post">
+            <label for="color">Color</label>
+            <input type="color" id="color" onchange="getColor()"/>
+            <output id="colorOut"></output>
+        </form>
+    </body>
+</html>

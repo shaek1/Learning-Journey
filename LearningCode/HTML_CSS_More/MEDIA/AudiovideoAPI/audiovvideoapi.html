@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Audio API</title>
+        <script>
+            var player, durationOutput, myInterval, elapsedOutput;
+            window.onload = function()
+            {
+                document.getElementById('playButton').addEventListener('click', playMusic, false);
+                document.getElementById('stopButton').addEventListener('click', stopMusic, false);
+                play = document.getElementById('myAudio');
+                //Audio Events
+                play.addEventListener('error', audioError, false);
+                play.addEventListener('ended', mediaEnded, false);
+
+                durationOutput = document.getElementById('duration');
+                elapsedOutput = document.getElementById('elapsed');
+            }
+            function mediaEnded()
+            {
+                durationOutput.innerHTML = "";
+                elapsedOutput.innerHTML ="";
+                alert("Media has completed playing");
+            }
+            function audioError()
+            {
+                alert("The audio has errors");
+            }
+            function stopMusic()
+            {
+                play.pause();
+            }
+            function playMusic()
+            {
+                play.play();
+                durationOutput.innerHTML = Math.round(play.duration);
+                myInterval = setInterval(update, 500);
+            }
+            function update()
+            {
+                elapsedOutput.innerHTML = Math.round(play.currentTime);
+            }
+        </script>
+    </head>
+    <body>
+        <audio id="myAudio">
+            <source src="http://localhost/AudiovideoAPI/Dutchavelli.mp3" type="audio/mp3"/>
+        </audio>
+        <p>Duration: <output id="duration"></output></p>
+        <p>Time Elapsed: <output id="elapsed"></output></p>
+        <button id="playButton">Play</button>
+        <button id="stopButton">Stop</button>
+    </body>
+</html>

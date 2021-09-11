@@ -1,0 +1,28 @@
+a:link {
+    color: #ffd800;
+    text-align: center;
+    font-family: Arial;
+    font-weight: bolder;
+    font-size: 24px;
+}
+#wrapper {
+    width: 900px;
+    height: 800px;
+    margin: 0 auto;
+}
+#banner {
+    width: 900px;
+    height: 100px;
+    background-image: url(../images/banner.PNG);
+}
+#nav {
+    background-color: 0ff;
+    width: 900px;
+    height: 50px;
+    display: table;
+}
+#home {
+    width: 150px;
+    height: 50px;
+
+}

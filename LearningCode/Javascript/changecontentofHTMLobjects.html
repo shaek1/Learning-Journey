@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Changing content of HTML</title>
+        <script>
+            function doIt() {
+                document.getElementById("output").innerHTML ="Text changed." + "<br>" + "Would you like to try again?";
+                
+            }
+        </script>
+    </head>
+    <body>
+        <button id="button1" onclick="doIt()">Click me</button><br><br>
+        <span id="output">This is some text</span>
+    </body>
+</html>

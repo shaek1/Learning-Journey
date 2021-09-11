@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Play Time</title>
+        <script>
+            var aud;
+            window.onload = function()
+            {
+                aud = document.getElementById('aud');
+                return setInterval(measure, 100);
+            }
+            function measure()
+            {
+                document.getElementById('out').innerHTML = aud.currentTime;
+            }
+        </script>
+    </head>
+<body>
+    <audio autoplay="autoplay" id="aud" controls="controls">
+        <source src="http://localhost/MEDIA/trackingplaytime/Dutchavelli.mp3" type="audio/mp3" />
+    </audio>
+    <span id="out"></span>
+</body>
+</html>

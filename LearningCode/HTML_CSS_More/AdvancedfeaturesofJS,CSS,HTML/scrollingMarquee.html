@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Scrolling Marquee</title>
+        <style>
+            body {
+                font-family: Calibri;
+            }
+            #marquee {
+                width: 650px;
+                height: 20px;
+                border: 1px solid black;
+                padding-left: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="marquee"></div><br>
+        <script>
+        i = 0;
+        myText = "welcome to our site! This week only - 25% of all storage devices! Check out our storage section.";
+        var sequence = setInterval(update, 100);
+        function update() {
+            i++;
+            if (i > myText.length) {
+                i = 0;
+            }
+            marqueeText = myText.substring(i, myText.length);
+            marqueeText += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+            marqueeText += myText.substring(0, i);
+            document.getElementById("marquee").innerHTML = marqueeText;
+        }
+        </script>
+    </body>
+</html>

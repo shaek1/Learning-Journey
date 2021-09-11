@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>BoxSizing</title>
+        <style>
+            div.container {
+                width: 300px;
+                height: 25px;
+                border: 10px solid black;
+            }
+            div.box {
+                box-sizing: border-box;
+                width: 33%;
+                border: 1px solid red;
+                float: left;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">Left</div>
+            <div class="box">Middle</div>
+            <div class="box">Righht</div>
+        </div>
+    </body>
+</html>
