@@ -1,0 +1,10 @@
+$(document).ready(function(){
+$("#bbb").hide();
+$("#cb").change(function(){
+    if(this.checked){
+    $("#bbb").show();
+    }else{
+        $("#bbb").hide();
+    }
+});
+});
