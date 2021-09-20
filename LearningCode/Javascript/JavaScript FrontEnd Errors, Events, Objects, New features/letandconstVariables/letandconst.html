@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Let and Const Variables</h3>
+    <p id="p1"></p>
+    <script>
+        let p1 = document.getElementById("p1");
+        const PC_MARKUP = 15;
+        let markup = 0;
+        function finalPrice(price) {
+            markup = price * (PC_MARKUP/100);
+            return price + markup;
+        };
+        let fp = finalPrice(2.85, 15);
+        p1.innerHTML +=
+        "Final price is " + fp;
+        p1.innerHTML += "<br />Markup is " + markup;
+        p1.innerHTML += "<br />PC_MARKUP is " + PC_MARKUP;
+    </script>
+</body>
+</html>

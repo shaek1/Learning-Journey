@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>String Methods</h3>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <script>
+        let p1 = document.getElementById("p1");
+        let ss = "Percipio by Skillsoft";
+        p1.innerHTML = (ss.substring(0,8).toUpperCase() +
+        ss.substring(8,ss.length)).replace(" ", " powered ");
+    </script>
+</body>
+</html>

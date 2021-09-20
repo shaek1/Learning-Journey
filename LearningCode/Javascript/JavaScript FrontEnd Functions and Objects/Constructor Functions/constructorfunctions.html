@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Objects via constructor functions</h3>
+    <p id="p1"></p>
+    <script>
+        let p1 = document.getElementById("p1");
+        function Vehicle (make, color, year) {
+            this.make = make;
+            this.color = color;
+            this.year = year;
+        }
+
+        let myRide = new Vehicle('Ford','White','2009');
+        let myFutureRide = new Vehicle('Toyota','Black','2019');
+        p1.innerHTML = 
+        `My future car is a ${myFutureRide.make}`;
+    </script>
+</body>
+</html>

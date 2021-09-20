@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>JavaScript Global vs Local variables</h4>
+    <p id="p1"></p>
+    <script>
+
+        var p1 = document.getElementById("p1");
+        function finalPrice(price, pcMarkup) {
+            var markup = price * (pcMarkup/100);
+            return price + markup;
+        };
+        var pc = finalPrice(2.85, 15);
+        p1.innerHTML +=
+        "Final price is " + pc;
+
+    </script>
+</body>
+</html>

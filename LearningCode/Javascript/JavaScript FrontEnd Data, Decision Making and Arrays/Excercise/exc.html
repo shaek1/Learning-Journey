@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Javascript exercise</h4>
+    <p id="p1"></p>
+    <script>
+
+        let p1 = document.getElementById("p1");
+        //declare empty array
+        let myArray =[];
+        //add sequential numbers to array
+        for (let x = 1; x < 10; x++){
+            myArray.push(x);
+        //remove third element (so 2 if counting from 0)
+        myArray.splice(2,1);
+        //declare variable to hold sum
+        let total = 0;
+        //add up elements
+        for(let x = 0; x < myArray.length; x++) {
+            total +=myArray[x];
+        }
+        //display
+        p1.innerHTML +=
+        `${myArray.join(' + ')} = ${total}`;
+
+        }
+
+    </script>
+</body>
+</html>

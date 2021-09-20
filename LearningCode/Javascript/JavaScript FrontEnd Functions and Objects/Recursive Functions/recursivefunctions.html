@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Functions Recursion</h2>
+    <p id="p1"></p>
+    <script>
+
+        let p1 = document.getElementById("p1");
+        function finalPrice (price, pcMarkup) {
+            let markup = price * (pcMarkup/100);
+            p1.innerHTML += 
+            `At a markup of ${pcMarkup} the final price is ${price + markup} <br/>`
+            if(pcMarkup > 1)
+            return finalPrice(price, --pcMarkup) ;
+        };
+        finalPrice(100,10)
+        
+
+    </script>
+</body>
+</html>

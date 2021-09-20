@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Prototype properties and methods</h3>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <script>
+
+        let p1 = document.getElementById("p1");
+        function Vehicle (make, color, year, cost) {
+                this.make = make;
+                this.color = color;
+                this.year = year;
+                this.cost = cost;
+                this.carDetails = function() {
+                    return `The ${this.year} ${this.make} will cost ${this.cost}`;
+                };
+            }
+        let myRide = 
+        new Vehicle('Ford', 'White', '2009', '10000');
+        p1.innerHTML = myRide.carDetails();
+        Vehicle.model;
+        myRide.model = 'Focus';
+        Vehicle.prototype.getMSRP = function () {
+            return `The MSRP on this ${this.model} is ${this.cost * .9}`;
+        }
+        
+    </script>
+</body>
+</html>
